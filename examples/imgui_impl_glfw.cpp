@@ -111,6 +111,8 @@ static void ImGui_ImplGlfw_SetClipboardText(void* user_data, const char* text)
 
 void ImGui_ImplGlfw_MouseButtonCallback(GLFWwindow* window, int button, int action, int mods)
 {
+    UNREFERENCED_PARAMETER(window);
+
     if (g_PrevUserCallbackMousebutton != NULL)
         g_PrevUserCallbackMousebutton(g_Window, button, action, mods);
 
@@ -120,6 +122,8 @@ void ImGui_ImplGlfw_MouseButtonCallback(GLFWwindow* window, int button, int acti
 
 void ImGui_ImplGlfw_ScrollCallback(GLFWwindow* window, double xoffset, double yoffset)
 {
+    UNREFERENCED_PARAMETER(window);
+
     if (g_PrevUserCallbackScroll != NULL)
         g_PrevUserCallbackScroll(g_Window, xoffset, yoffset);
 
@@ -130,6 +134,8 @@ void ImGui_ImplGlfw_ScrollCallback(GLFWwindow* window, double xoffset, double yo
 
 void ImGui_ImplGlfw_KeyCallback(GLFWwindow* window, int key, int scancode, int action, int mods)
 {
+    UNREFERENCED_PARAMETER(window);
+
     if (g_PrevUserCallbackKey != NULL)
         g_PrevUserCallbackKey(g_Window, key, scancode, action, mods);
 
